@@ -1,28 +1,23 @@
+import java.util.Scanner;
 
 public class Gugudan {
 	public static void main(String[] args) {
+		// 숫자를 입력해서 해당 단의 구구단 실행시키기
+		// 2이상 9이하의 정수가 아닌 숫자 입력시 메세지 출력시키기
+		Scanner dan = new Scanner(System.in);
 
-//		// 구구단 2단 부터 9단까지
-//		int d = 2;
-//		while (d<10) {
-//			System.out.println(d + " 단");
-//		int i = 1;
-//		while (i<10) {
-//			System.out.println(d + " 곱하기 "+ i +" 은 " + 2 * i);
-//			i=i+1;
-//		}
-//		d=d+1;
-//	}
+		int dan_number = dan.nextInt();
 		
-		
-		// 구구단 2단 부터 9단까지 - while문을 for 문으로 변경
-		
-			for (int d = 2; d<10; d++) {
-			System.out.println(d + " 단");
-			
-			for (int i= 1; i<10; i++) {
-				System.out.println(d + " 곱하기 "+ i +" 은 " + 2 * i);
+		if (dan_number>=2 && dan_number <= 9) {
+
+		System.out.println("구구단 " + dan_number + " 단");
+
+		for (int i = 1; i<10; ++i) {
+		System.out.println(dan_number + " 곱하기 " + i + " 는 " + dan_number * i);
+			}
+		}
+		else {
+		System.out.println("2이상, 9 이하의 값만 입력할 수 있습니다.");	
 			}
 		}
 	}
-}
